@@ -1,0 +1,53 @@
+
+    {
+        "date": "dd-MM-YYYY",
+        "exercises": [
+            {
+                "exerciseName": "deadlift",
+                "notes": "notes here 2",
+                "details": [
+                    {
+                        "id": 0,
+                        "sets": 2,
+                        "reps": 5,
+                        "weight": 60,
+                        "measurement": "kgs"
+                    },
+                    {
+                        "id": 1,
+                        "sets": 1,
+                        "reps": 5,
+                        "weight": 100,
+                        "measurement": "kgs"
+                    },
+                    {
+                        "id": 2,
+                        "sets": 2,
+                        "reps": 5,
+                        "weight": 170,
+                        "measurement": "kgs"
+                    }
+                ]
+            },
+            {
+                "exerciseName": "lat pull down",
+                "notes": "notes here",
+                "details": [
+                    {
+                        "id": 0,
+                        "sets": 2,
+                        "reps": 12,
+                        "weight": 90,
+                        "measurement": "lbs"
+                    },
+                    {
+                        "id": 1,
+                        "sets": 2,
+                        "reps": 10,
+                        "weight": 100,
+                        "measurement": "lbs"
+                    }
+                ]
+            }
+        ]
+    }
