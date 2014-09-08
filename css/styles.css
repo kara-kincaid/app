@@ -62,6 +62,10 @@ header, footer {
 	text-align: center;
 }
 
+.wrapper {
+	width: 100%;
+}
+
 header {
 	top: 0;
 	color: #f1f1f1;
@@ -77,7 +81,8 @@ footer {
 }
 
 .content {
-	width: 960px;
+	/*min-width: 320px;
+	max-width: 960px;*/
 	padding: 20px;
 	margin: 65px auto;
 }
@@ -95,4 +100,36 @@ h3 {
 h3 span {
 	display: block;
 	font-weight: normal;
+}
+
+input, select, textarea {
+	display: block;
+	width: 100%;
+}
+
+label {
+	padding: 10px 0;
+	display: block;
+}
+
+.half, .full {
+	clear: both;
+}
+
+.half .field {
+	width: 46%;
+	float: left;
+}
+
+.third .field {
+	width: 19.5%;
+	float: left;
+}
+
+.half .field:first-child,
+.third .field:first-child {
+	padding-right: 20px;
+}
+.additional-set-template {
+	display: none;
 }

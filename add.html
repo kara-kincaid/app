@@ -1,96 +1,109 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
-	<h2>Enter workout details</h2>
+	<div class="wrapper">
+		<header>
+			<h1>Enter Workout Details</h1>
+		</header>
 
-	<div id="step1">
-		<form>
-			<label for="cycle">
-				<select id="cycle">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-				</select>
-			</label>
+		<div class="content">
+			<div id="step step1">
+				<form>
+					<div class="full">
+						<label for="excercise">Exercise
+							<input type="text" name="excercise" placeholder="Deadlift"/>
+						</label>
+					</div>
+				</form>
+			</div>
 
-			<label for="week">
-				<select id="week">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-				</select>
-			</label>
-		</form>
+			<div id="step step2">
+				<form id="set-0" class="additional-sets">
+					<div class="additional-set-template">
+						<div class="half">
+							<div class="field">
+								<label for="sets">Sets
+									<select id="sets" name="sets">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select>
+								</label>
+							</div>
+							<div class="field">
+								<label for="reps">Reps
+									<select id="reps" name="reps">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+									</select>
+								</label>
+							</div>
+						</div>
+						
+						<div class="third">
+							<div class="field">
+								<label for="weight">Weight
+									<input type="num" id="weight" name="weight" placeholder="150"/>
+								</label>
+							</div>
+
+							<div class="field">&nbsp;
+								<label for="measurement">
+									<select id="measurement" name="measurement">
+										<option>lb</option>
+										<option>kg</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="additional-sets-here"></div>
+
+					<div class="full">
+						<label for="notes">Notes
+							<textarea  name="notes" rows="2" placeholder="notes here..."></textarea>
+						</label>
+					</div>
+
+					<a href="add.html#step2" class="add-set btn">Add another set</a>
+
+					<hr />
+
+					<a href="add.html#step1" class="add-exercise btn">Add another exercise</a>
+					<a href="workout.html" class="btn">Finish</a>
+				</form>
+			</div>
+		</div>
+
+		<footer>
+			
+		</footer>
 	</div>
 
-	<div id="step2">
-		<form>
-			<label for="excercise">
-				<input type="text" name="excercise" placeholder="Deadlift"/>
-			</label>
-		</form>
-	</div>
-
-	<div id="step3">
-		<form>
-			<label for="sets">
-				<select id="sets" name="sets">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-				</select>
-			</label>
-
-			<label for="reps">
-				<select id="reps" name="reps">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
-					<option>11</option>
-					<option>12</option>
-					<option>13</option>
-					<option>14</option>
-					<option>15</option>
-				</select>
-			</label>
-
-			<label for="weight">
-				<input type="num" name="weight" placeholder="150"/>
-			</label>
-
-			<label for="system">
-				<select id="system" name="system">
-					<option>lb</option>
-					<option>kg</option>
-				</select>
-			</label>
-
-			<label for="notes">
-				<input type="text" name="notes" placeholder="notes here..."/>
-			</label>
-
-			<a href="add.html#step3" class="btn">Add another set</a>
-			<a href="workout.html" class="btn">Finish</a>
-		</form>
-	</div>
-
-
-	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-	<script type="text/javscript" src="js/scripts.js"></script>
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
