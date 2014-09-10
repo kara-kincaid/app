@@ -133,3 +133,7 @@ label {
 .additional-set-template {
 	display: none;
 }
+
+.result {
+	word-wrap: break-word;
+}

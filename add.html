@@ -11,18 +11,14 @@
 		</header>
 
 		<div class="content">
-			<div id="step step1">
-				<form>
-					<div class="full">
-						<label for="excercise">Exercise
-							<input type="text" name="excercise" placeholder="Deadlift"/>
-						</label>
-					</div>
-				</form>
-			</div>
+			<form id="workoutForm" action="" name="workoutForm" method="post">
+				<div class="full">
+					<label for="excercise">Exercise
+						<input type="text" name="excercise" placeholder="Deadlift"/>
+					</label>
+				</div>
 
-			<div id="step step2">
-				<form id="set-0" class="additional-sets">
+				<div class="additional-sets">
 					<div class="additional-set-template">
 						<div class="half">
 							<div class="field">
@@ -88,14 +84,16 @@
 						</label>
 					</div>
 
-					<a href="add.html#step2" class="add-set btn">Add another set</a>
+					<a href="#" class="add-set btn">Add another set</a>
 
 					<hr />
 
-					<a href="add.html#step1" class="add-exercise btn">Add another exercise</a>
-					<a href="workout.html" class="btn">Finish</a>
+					<a href="add.html" class="add-exercise btn">Add another exercise</a>
+					<input type="submit" id="finish" name="btn" class="btn" value="Submit" />
+					
 				</form>
-			</div>
+
+				<div class="result"></div>
 		</div>
 
 		<footer>
