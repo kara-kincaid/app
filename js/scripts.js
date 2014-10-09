@@ -6,16 +6,18 @@ $(document).ready(function(){
 		// define json data
 		data = jsonData;
 
+		var exerciseContainer = $(".exercise");
 		var newLog = [];
 
 		$(".date").append(data.date);
 
 		// determine length for each item in object exercises, append data to html
 		for(var i = 0; i < data.exercises.length; i++) {
-			$(".exercise").append("<h3>" + data.exercises[i].exerciseName + "<span>" + data.exercises[i].notes + "</span></h3>");
+			////////////append to local variable defined outside of loop
+			exerciseContainer.append("<h3>" + data.exercises[i].exerciseName + "<span>" + data.exercises[i].notes + "</span></h3>");
 			// determine length for each item under object details, append data to html
 			for(var x = 0; x < data.exercises[i].details.length; x++) {
-				$(".exercise").append("<ul><li>" + data.exercises[i].details[x].sets + "x" + data.exercises[i].details[i].reps + " @ " + data.exercises[i].details[x].weight + data.exercises[i].details[x].measurement + "</li></ul>");
+				exerciseContainer.append("<ul><li>" + data.exercises[i].details[x].sets + "x" + data.exercises[i].details[i].reps + " @ " + data.exercises[i].details[x].weight + data.exercises[i].details[x].measurement + "</li></ul>");
 
 				// push data to variable newLog
 				newLog.push(data.exercises[i].details[x]);
@@ -25,6 +27,9 @@ $(document).ready(function(){
 
 	// get html in .additional-set, append it to .additional-sets-here
 	// on click of .add-set add form to additional-sets-here
+	////////////append to local variable defined outside of loop
+	
+
 	$('<div/>', {
 		'class' : 'additional-set', html: GetHtml()
 		}).appendTo('.additional-sets-here');
@@ -34,6 +39,7 @@ $(document).ready(function(){
 		}).hide().appendTo('.additional-sets-here').slideDown('slow');
 
 	});
+
 
 
 	// clone .additional-set-template, add to variable $html
@@ -92,6 +98,27 @@ $(document).ready(function(){
 			return false;
 		});
 	});
+
+
+	// Check for HTML5 local storage
+	// function supports_html5_storage() {
+	// 	try {
+	// 		return 'localStorage' in window && window['localStorage'] !== null;
+	// 	} catch (e) {
+	// 		return false;
+	// 	}
+	// }
+
+	function displayFormContents(someForm) {
+		var out = '';
+		
+		for (var i=0, el; el = someForm.elements[i]; i++) {
+			if (el.name) {
+				out += el.name + ' = ' + el.value + '\n';
+			}
+		}
+		alert(out);
+	}
 	
 
 });

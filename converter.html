@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header>
+			<h1>Pound to Kilogram converter</h1>
+		</header>
+
+		<div class="content">
+			<form id="conversionForm" action="" name="conversionForm">
+				<div class="half">
+					<div class="field">
+						<label for="weight">Weight
+							<input type="text" name="weight" placeholder=""/>
+						</label>
+					</div>
+
+					<div class="field">
+						<label for="measurement">&nbsp;
+							<select id="measurement" name="measurement">
+								<option value="1" name="lb">lb</option>
+								<option value="2" name="kg">kg</option>
+							</select>
+						</label>
+					</div>
+				</div>
+
+				<input type="submit" id="convert" name="btn" class="btn" value="Convert" />
+				<div class="converted-number"></div>
+			</form>
+		</div>
+
+		<footer>
+			
+		</footer>
+	</div>
+
+	<script src="js/jquery-2.1.1.js"></script>
+	<!--<script src="js/scripts.js"></script>-->
+	<script>
+	var originalValue = $("input[name=weight]").val();
+	var measurement = $("select[name=measurement] option:selected");
+	console.log(measurement);
+	console.log(originalValue);
+
+
+	(function($){
+		$(document).ready(function(){
+			$('#button1').click(function(){ 
+				alert( 'Value is: ' + $('#selectList').val() ); 
+			});
+			$('#button2').click(function(){ 
+				alert( 'Text is: ' + $('#selectList :selected').text() ); 
+			}); 
+		});
+	})(jQuery);
+
+	// $("#conversionForm").submit(function () {
+	// 	if(measurement.value === "lb") {
+	// 		// convert to kgs
+	// 		console.log("LBS");
+	// 	} else {
+	// 		// convert to lbs
+	// 		console.log("KGS");
+	// 	}
+	// 	return false;
+	// });
+
+	</script>
+</body>
+</html>
